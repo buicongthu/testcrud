@@ -1,5 +1,6 @@
 package com.example.testcrud.Controller;
 
+import com.example.testcrud.Dto.request.loginRequest;
 import com.example.testcrud.Dto.userDto;
 import com.example.testcrud.Service.interfaces.userService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,4 +22,8 @@ public class authController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
         }
     }
+//    @PostMapping("/login")
+//    public ResponseEntity<Object> login(@RequestBody loginRequest loginRequest){
+//
+//    }
 }
