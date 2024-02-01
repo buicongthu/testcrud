@@ -7,7 +7,10 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Collection;
 
 public class UserDetailsImpl implements UserDetails {
-    private user user;
+    
+    
+    private String username;
+    private String password;
 
     public UserDetailsImpl(user user) {
     }
@@ -19,12 +22,12 @@ public class UserDetailsImpl implements UserDetails {
 
     @Override
     public String getPassword() {
-        return user.getPassword();
+        return password;
     }
 
     @Override
     public String getUsername() {
-        return user.getUsername();
+        return username;
     }
 
     @Override

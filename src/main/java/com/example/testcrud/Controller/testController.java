@@ -1,14 +1,13 @@
 package com.example.testcrud.Controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.example.testcrud.Dto.request.loginRequest;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/v1/test")
 public class testController {
-    @GetMapping("/test")
-    public String test(){
-        return "helo";
+    @PostMapping("/test")
+    public String test(@RequestBody loginRequest loginRequest){
+        return loginRequest.getUsername();
     }
 }
